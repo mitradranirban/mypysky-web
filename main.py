@@ -1,9 +1,9 @@
 """
-MyPySky
+MyPySky-web
 
 created by mitradranirban
 
-Pygame based platform scroller with sky fan art
+Pygame based platform scroller with sky fan art - web version 
 
 distributed under GNU All-Permissive licence
 
@@ -12,7 +12,7 @@ are permitted in any medium without royalty provided the copyright
 notice and this notice are preserved.  This file is offered as-is,
 without any warranty.
 """
-
+import asyncio
 import pygame
 import pygame.freetype
 from pygame.locals import *
@@ -1104,7 +1104,7 @@ class Level_09(Level):
             block.player = self.player
             self.loot_list.add(block)
 
-def main():
+async def main():
     """ Main Program """
     
 
@@ -1253,10 +1253,11 @@ def main():
 
         # Go ahead and update the screen with what we've drawn.
         pygame.display.flip()
+        await asyncio.sleep(0)
 
     # Be IDLE friendly. If you forget this line, the program will 'hang'
     # on exit.
     pygame.quit()
 
 if __name__ == "__main__":
-    main()
+    asyncio.run(main())

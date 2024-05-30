@@ -1,3 +1,9 @@
 *.pyc
 *.pyo
 __pycache__
+*.wav
+*.mp3
+*.egg-info
+*-pygbag.???
+/build
+/dist
