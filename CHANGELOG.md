@@ -1,4 +1,6 @@
 # CHANGELOG FOR MYPYSKY
+## Version 0.0.6 [30th May 2024]
+* Frked to create web version 
 
 ## Version 0.0.5 [16th Decenber 2020]
 
