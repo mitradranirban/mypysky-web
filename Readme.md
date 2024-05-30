@@ -3,7 +3,6 @@
 This is a fork of my python base game mypysky to run on browser using pygame-wasm 
 
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a3b3ba609a2d40978158fd521e922ad6)](https://app.codacy.com/gh/mitradranirban/mypysky?utm_source=github.com&utm_medium=referral&utm_content=mitradranirban/mypysky&utm_campaign=Badge_Grade_Settings)
 
 *mypysky* is a personal attempt to learn python programming by creating a game using pygame library as well as creating an interactive playable fanart for my favorite mobile game - Sky children of light 
 
