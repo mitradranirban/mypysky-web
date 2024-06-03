@@ -13,8 +13,7 @@ notice and this notice are preserved.  This file is offered as-is,
 without any warranty.
 """
 import asyncio
-import pygame
-import pygame.freetype
+import pygame 
 from pygame.locals import *
 import os
 import random
@@ -22,6 +21,7 @@ import random
 # Initiate pygame modules
 pygame.init()
 pygame.mixer.init()
+pygame.font.init()
 
 # Colors
 BLACK    = (   0,   0,   0)
@@ -55,7 +55,7 @@ PLANT = 'plant.png'
 # create the pygame font object
 font_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),"fonts","ani.ttf")
 font_size = TILEY
-myfont = pygame.freetype.Font(font_path, font_size)
+myfont = pygame.font.Font(font_path, font_size)
 
 # sounds used for effect
 s = 'sounds'
@@ -1205,7 +1205,9 @@ async def main():
             else:
                 pygame.draw.rect(gui, inactive,(x,y,w,h))
 
-            myfont.render_to(screen, (x+w//2,y), msg, WHITE, None, size = TILEY)
+            buttontext = myfont.render(msg, True, WHITE, None)
+            screen.blit(buttontext, (x,y))
+            
         def stats(score,health):
             """display score and health and buttons on the screen"""
             hp = hex(health)
@@ -1214,10 +1216,15 @@ async def main():
             else:
                 HI = pygame.image.load(os.path.join('images', 'hi'+str(hp)+'.png'))
                 screen.blit(HI, (500,4))
+              
             CANDY = pygame.image.load(os.path.join('images', 'candy.png'))
             screen.blit(CANDY,(4, 4,))
-            myfont.render_to(screen,  (54,4), str(score), WHITE, None, size  = TILEY)
-            myfont.render_to(screen, (600,4),str(health), WHITE, None, size = TILEY)
+            score_value = myfont.render(str(score), true, WHITE, None )
+            screen.blit(score_value,(60,4))
+            health_value = myfont.render(str(health), true, WHITE, None )
+            screen.blit(health_value,(600,4))
+              
+            """ Display gui buttons for touchscreen """
             button("<",100,450,50,50, GRAY, GREY,player.go_left)
             button(">",950,450,50,50,GRAY,GREY,player.go_right)
             button("^",125,400,50,50,GRAY,GREY,player.jump)
