@@ -6,21 +6,11 @@ This is a fork of my python base game mypysky to run on browser using pygame-was
 
 *mypysky* is a personal attempt to learn python programming by creating a game using pygame library as well as creating an interactive playable fanart for my favorite mobile game - Sky children of light 
 
-## How to download 
-
-Go to https://game.atipra.in/mypysky/download.html to get link to latest versions. 
-
+ 
 ## How to play  
 
-install python 3 . For details  go to <https://python.org>
-
-install pygame module
-
-`pip install pygame`
-
-issue the following command in command line 
-
-`python3 MyPySky.py`or open the file with python
+ Go to https://mitradranirban.github.io/mypysky-web
+ After the game has loaded and "Ready to start!" is displayed - click on the screen
 
 ## Player control 
 
@@ -30,7 +20,9 @@ Press 'd' or Right Arrow or touch '>' to go right
 
 Press 'w' or Up arrow or touch "^" to jump
 
-Press 'q' to quit
+Touch '||' to stop 
+
+Press 'q' or close window/ tab to quit
 
 ## Scoring 
 
